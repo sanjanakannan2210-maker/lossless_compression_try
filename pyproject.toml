@@ -1,0 +1,33 @@
+[project]
+name = "lossless-compression-try"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+
+requires-python = ">=3.12"
+dependencies = []
+
+# NOTE: The below block has been commented out to prevent the repo from being a package, it needs to just be
+# a bundle of scripts.
+
+# [project.scripts]
+# lossless-compression-try = "lossless_compression_try:main"
+#
+# [build-system]
+# requires = ["uv_build>=0.13.5,<0.14.0"]
+# build-backend = "uv_build"
+
+# NOTE: Below entries make it  a "bundle of scripts," and not a package.
+[tool.uv]
+package = false
+
+# This is to run scripts locally on CPU-only devices, on cloud GPU, clone the repo, and do not create a venv,
+# just run the script with system packages, as cloud GPU comes pre-installed with PyTorch.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }

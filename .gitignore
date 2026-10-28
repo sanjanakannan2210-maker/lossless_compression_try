@@ -1,0 +1,18 @@
+# This file notes what files and folders will be ignored by git while pushing to the git repository.
+# Anything included here will only remain local.
+
+
+# Ignore virtual env package and metadata files.
+.venv/
+uv.lock
+
+# Ignore all bytecode and python metadata
+__pycache__/
+*.py[cod]
+.python-version
+
+# Ignore Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore any saved pytorch model files.
+*.pt
