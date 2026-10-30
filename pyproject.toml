@@ -21,7 +21,7 @@ dependencies = []
 [tool.uv]
 package = false
 
-# This is to run scripts locally on CPU-only devices, on cloud GPU, clone the repo, and do not create a venv,
+# NOTE: This is to run scripts locally on CPU-only devices, on cloud GPU, clone the repo, and do not create a venv,
 # just run the script with system packages, as cloud GPU comes pre-installed with PyTorch.
 [[tool.uv.index]]
 name = "pytorch-cpu"
