@@ -16,3 +16,6 @@ __pycache__/
 
 # Ignore any saved pytorch model files.
 *.pt
+
+# Secrets like PATs and API keys
+.secrets/
